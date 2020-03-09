@@ -1,8 +1,3 @@
-# our base image
-FROM python:3-onbuild
-
-# specify the port number the container should expose
-EXPOSE 5000
-
-# run the application
-CMD ["python", "./hello.py"]
+FROM scratch
+ADD bin/helloworld /helloworld
+CMD ["/helloworld"]
